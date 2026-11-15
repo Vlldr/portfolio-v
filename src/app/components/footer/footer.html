@@ -1,0 +1,11 @@
+<footer class="footer footer-center border-t border-base-300 p-6 text-sm">
+  <nav>
+    <ul class="flex flex-wrap justify-center gap-2">
+      <li><a href="#top" class="btn btn-ghost btn-xs">Home</a></li>
+      @for (link of links(); track link.href) {
+        <li><a [href]="link.href" class="btn btn-ghost btn-xs">{{ link.label }}</a></li>
+      }
+    </ul>
+  </nav>
+  <p class="opacity-70">Copyright &copy; {{ year }} {{ name() }}. All Rights Reserved.</p>
+</footer>

@@ -1,0 +1,20 @@
+<header class="navbar sticky top-0 z-10 border-b border-base-300 bg-base-100/90 backdrop-blur">
+  <div class="mx-auto flex w-full max-w-5xl items-center justify-between px-4">
+    <a href="#top" class="text-xl font-bold">{{ logo() }}</a>
+
+    <ul class="hidden gap-1 md:flex">
+      @for (link of links(); track link.href) {
+        <li><a [href]="link.href" class="btn btn-ghost btn-sm">{{ link.label }}</a></li>
+      }
+    </ul>
+
+    <details class="dropdown dropdown-end md:hidden">
+      <summary class="btn btn-ghost btn-sm">Menu</summary>
+      <ul class="menu dropdown-content z-20 mt-2 w-44 rounded-box bg-base-100 p-2 shadow">
+        @for (link of links(); track link.href) {
+          <li><a [href]="link.href">{{ link.label }}</a></li>
+        }
+      </ul>
+    </details>
+  </div>
+</header>

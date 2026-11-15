@@ -1,0 +1,21 @@
+<section id="skills" class="mx-auto max-w-5xl px-4 py-16">
+  <p class="text-sm font-semibold uppercase tracking-wide text-primary">Explore My</p>
+  <h2 class="text-3xl font-bold">Skills</h2>
+  <div class="mt-6 grid gap-6 md:grid-cols-2">
+    @for (group of groups(); track group.title) {
+      <div class="card border border-base-300 bg-base-100 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">{{ group.title }}</h3>
+          <ul class="mt-2 flex flex-col gap-3">
+            @for (skill of group.skills; track skill.name) {
+              <li class="flex items-center justify-between gap-2">
+                <span class="font-medium">{{ skill.name }}</span>
+                <span class="badge badge-soft badge-primary">{{ skill.level }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</section>

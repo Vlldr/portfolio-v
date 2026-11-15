@@ -1,0 +1,22 @@
+<section id="experience" class="mx-auto max-w-5xl px-4 py-16">
+  <p class="text-sm font-semibold uppercase tracking-wide text-primary">Where I've Worked</p>
+  <h2 class="text-3xl font-bold">Experience</h2>
+  <ol class="mt-6 flex flex-col gap-6 border-s-2 border-primary ps-6">
+    @for (item of items(); track item.role + item.period) {
+      <li class="card border border-base-300 bg-base-100 shadow-sm">
+        <div class="card-body">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="card-title">{{ item.role }}</h3>
+            <span class="badge badge-soft badge-primary">{{ item.period }}</span>
+          </div>
+          <p class="font-medium opacity-80">{{ item.company }}</p>
+          <ul class="mt-2 list-disc ps-5 opacity-90">
+            @for (point of item.highlights; track point) {
+              <li>{{ point }}</li>
+            }
+          </ul>
+        </div>
+      </li>
+    }
+  </ol>
+</section>

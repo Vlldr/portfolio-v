@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: totoro --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "totoro";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #fbf6e6;
+  --color-base-200: #f1e9cf;
+  --color-base-300: #dccfa8;
+  --color-base-content: #34402e;
+  --color-primary: #4f8a4e;
+  --color-primary-content: #ffffff;
+  --color-secondary: #7fb8cc;
+  --color-secondary-content: #173440;
+  --color-accent: #e9a548;
+  --color-accent-content: #2b1d05;
+  --color-neutral: #3d4a36;
+  --color-neutral-content: #fbf6e6;
+  --color-info: #6fb3c9;
+  --color-success: #5f9e53;
+  --color-warning: #e9a548;
+  --color-error: #c8584b;
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,15 @@
+<div class="min-h-screen bg-base-100 text-base-content">
+  <app-navbar [logo]="portfolio.logo" [links]="portfolio.navLinks" />
+
+  <main>
+    <app-hero [profile]="portfolio.profile" />
+    <app-about [bio]="portfolio.about" />
+    <app-experience [items]="portfolio.experience" />
+    <app-education [items]="portfolio.education" />
+    <app-skills [groups]="portfolio.skillGroups" />
+    <app-projects [projects]="portfolio.projects" />
+    <app-contact [links]="portfolio.contact" />
+  </main>
+
+  <app-footer [name]="portfolio.profile.name" [links]="portfolio.navLinks" />
+</div>

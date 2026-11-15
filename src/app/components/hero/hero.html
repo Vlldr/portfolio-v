@@ -1,0 +1,19 @@
+<section id="top" class="hero min-h-[85vh]">
+  <div class="hero-content text-center">
+    <div class="max-w-2xl">
+      <p class="font-semibold uppercase tracking-widest text-sm opacity-70">{{ profile().greeting }}</p>
+      <h1 class="mt-2 text-5xl font-bold tracking-tight md:text-6xl">{{ profile().name }}</h1>
+      <span class="badge badge-accent badge-lg mt-5 font-medium">{{ profile().role }}</span>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a [href]="profile().cvUrl" target="_blank" rel="noopener" class="btn btn-primary">Download CV</a>
+        <a href="#contact" class="btn btn-outline">Contact Info</a>
+      </div>
+
+      <div class="mt-6 flex justify-center gap-2">
+        <a [href]="profile().linkedinUrl" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">LinkedIn</a>
+        <a [href]="profile().githubUrl" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
